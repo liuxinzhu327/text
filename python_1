@@ -1,0 +1,57 @@
+# 01逆转字符串——输入一个字符串，将其逆转并输出。
+strMsg=input('请输入一个字符串')
+print(strMsg[::-1])
+
+# 02统计元音字母
+s = input("请输入字符串：")
+yuan = ['a', 'e', 'i', 'o', 'u']
+sum = 0
+for item in s:
+    if item in yuan:
+        sum += 1
+        pass
+    pass
+print('字符串中元音字母共有%d个' % sum)
+# 判断每个元音字母个数
+a = 0
+e = 0
+i = 0
+o = 0
+u = 0
+for item in s:
+    if item == yuan[0]:
+        a += 1
+        pass
+    if item == yuan[1]:
+        e += 1
+        pass
+    if item == yuan[2]:
+        i += 1
+        pass
+    if item == yuan[3]:
+        o += 1
+        pass
+    if item == yuan[4]:
+        u += 1
+        pass
+    pass
+print('其中a有%d个，e有%d个，i有%d个，o有%d个，u有%d个' % (a, e, i, o, u))
+
+# 03判断是否为回文
+s = input("请输入字符串：")
+rs = list(reversed(s))
+if list(s) == rs:
+    print("%s是回文" % s)
+else:
+    print("%s不是回文" % s)
+
+# 04统计字符串中的单词数目
+def word_len(s):
+    return len([i for i in s.split(' ') if i])
+def main():
+    s=str(input("请输入字符串："))
+    # file=open('aaa.txt')
+    # s=file.read()   #从文本中读取字符串
+    l=word_len(s)
+    print(l)
+main()
